@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class chap2_25 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter employee's name: ");
+		String Name = input.nextLine();
+		System.out.println("Enter number of hours worked in a week: ");
+		Double Week = input.nextDouble();
+		System.out.println("Enter hourly pay rate: ");
+		Double Rate = input.nextDouble();
+		System.out.println("Federal tax withholding rate (e.g., 20%) ");
+		Double Fed = input.nextDouble();
+		System.out.println("State tax withholding rate (e.g., 9%) ");
+		Double State = input.nextDouble();
+		
+		double workhour = Week * Rate;
+		double Fedtax = workhour * Fed;
+		double Statetax = workhour*State;
+		double Totaldec = Fedtax + Statetax;
+		double Remain = workhour - Totaldec ;
+		
+		System.out.println("Employee Name: " + Name);
+		System.out.println("Hours Worked:" + Week );
+		System.out.println("Pay Rate: $" + Rate);
+		System.out.println("Gross Pay: $" + workhour );
+		System.out.println("Deductions:");
+		System.out.println("Federal Withholding $" + Fedtax);
+		System.out.println("State Withholding $" + Statetax);
+		System.out.println("Total Deduction: $" + Totaldec);
+		System.out.println("Net Pay: $" + Remain);
+		
+		
+	}
+
+}
