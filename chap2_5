@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class chap2_5 {
+	
+	public static void main (String[] args) {
+		
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Enter the subtotal and a gratuity rate:");
+		double Subtotal=input.nextDouble();
+		double Gratuity=input.nextDouble();
+		
+		double Gratcomp= Gratuity / 10;
+		
+		
+		System.out.println("The gratuity is $" + Gratcomp+ " and total is $" + (Subtotal+Gratcomp) );
+	}
+
+}
+		
+		
