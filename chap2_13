@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class chap2_13 {
+	
+	public static void main (String[] args){
+		
+		Scanner input= new Scanner(System.in);
+		
+		System.out.println("Enter the monthly saving amount: ");
+		double Saving = input.nextDouble();
+		
+		/*Declare variable*/
+		final double constant = 0.05/12;
+		double Amount = 0;
+		int x=1;
+		
+		do {
+			/*Computation*/
+			System.out.print("value of x : " + x );
+	        x++;
+	        Amount = (Saving + Amount) * (1 + constant);
+	        System.out.print(" Show Amount" + Amount + "\n" ); 
+			}while( x < 7 );
+				
+		System.out.println("After the sixth month, the account value is $ " + Amount);
+		
+	}
+	
+}
