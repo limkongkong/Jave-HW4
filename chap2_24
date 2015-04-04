@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class chap2_24 {
+	
+	 public static void main(String[] args) {
+		 // Create a Scanner
+		 Scanner input = new Scanner(System.in);
+
+		 // Receive the amount
+		 System.out.print("Enter an amount, for example, 1156: ");
+		 Double Amount = input.nextDouble();
+		 
+		 Double Dollar= Amount / 100;
+		 Double Cent= Amount/10 % 10;
+		 
+		 
+		 System.out.println("Your amount is $" + Dollar );
+	 }
+}
+		 
+		 
+		 
