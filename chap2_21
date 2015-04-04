@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class chap2_21 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner (System.in);
+		
+		System.out.println("Enter investment amount:  ");
+		double Investment = input.nextDouble();
+		System.out.println("Enter annual interest rate in percentage: ");
+		double Rate = input.nextDouble();
+		System.out.println("Enter number of years: ");
+		int Year = input.nextInt();
+		
+		double Monthly = Rate * 0.01 /12;
+		int NOY = Year * 12;
+		
+		double Future = Investment * Math.pow( (1 +Monthly), NOY );
+		
+		System.out.println("Accumulated value is $ " + Future );
+	
+	}
+
+}
