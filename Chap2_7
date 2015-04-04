@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Chap2_7 {	
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter the number of minutes: ");
+		int Minutes= input.nextInt();
+		
+		final int constant = 60*24*365;
+		
+		int Year=Minutes/constant;
+		int Days=Minutes % constant /(60*24);
+		
+		System.out.println( Minutes + " minutes is approximately " + Year + " year and " + Days + " days" );
+		
+	}
+
+}
