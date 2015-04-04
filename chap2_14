@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class chap2_14 {
+	
+	public static void main (String[] args){
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter weight in pounds: ");
+		double Pounds = input.nextDouble();
+		System.out.println("Enter height in inches: ");
+		double Inches = input.nextDouble();
+		
+		final double weightconstant=0.45359237;
+		final double heightconstant= 0.0254;
+		
+		double Weight = Pounds * weightconstant;
+		double Height= Inches * heightconstant;
+		
+		double result = Weight/Math.pow((Height), 2);
+		
+		System.out.println("BMI is " + result);
+	
+	}
+
+}
