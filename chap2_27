@@ -1,0 +1,42 @@
+import javax.swing.JOptionPane;
+
+public class chap2_27 {
+	
+	public static void main (String[] args){
+		
+	String Name = JOptionPane.showInputDialog ("Enter employee's name: ");
+	
+	String Week = JOptionPane.showInputDialog("Enter number of hours worked in a week: ");
+	int intWeek = Integer.parseInt(Week);
+	
+	String Rate = JOptionPane.showInputDialog ("Enter hourly pay rate: ");
+	double douRate = Double.parseDouble(Rate);
+	
+	String Fed = JOptionPane.showInputDialog ("Federal tax withholding rate (e.g., 20%)  ");
+	double douFed = Double.parseDouble(Fed);
+	
+	String State = JOptionPane.showInputDialog ("State tax withholding rate (e.g., 9%)  ");
+	double douState= Double.parseDouble(State);
+	
+	
+	double workhour = intWeek * douRate;
+	double Fedtax = workhour * douFed;
+	double Statetax = workhour*douState;
+	double Totaldec = Fedtax + Statetax;
+	double Remain = workhour - Totaldec ;
+	
+	String output = "Employee Name: " + Name + 	" \n" +
+					"Hours Worked:" + intWeek + " \n" +
+					"Pay Rate: $" + douRate + " \n" +
+					"Gross Pay: $ " + workhour + " \n" +
+					"Deduction: \n" +
+					"Federal Withholding $" + Fedtax + " \n" +
+					"State Withholding $" + Statetax + " \n" +
+					"Total Deduction: $ " + Totaldec + " \n" +
+					"Net Pay: $ " + Remain + " \n";
+			
+	JOptionPane.showMessageDialog(null, output );
+		
+	}
+
+}
